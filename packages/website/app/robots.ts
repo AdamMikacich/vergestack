@@ -1,42 +1,42 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
+        allow: '/'
       },
       {
         // Block OpenAI's training bot
         userAgent: 'GPTBot',
-        disallow: '/',
+        disallow: '/'
       },
       {
         // Block Anthropic's training bot
         userAgent: 'ClaudeBot',
-        disallow: '/',
+        disallow: '/'
       },
       {
         // Allow OpenAI's search bot
         userAgent: 'OAI-SearchBot',
-        allow: '/',
+        allow: '/'
       },
       {
         // Allow Anthropic's search bot
         userAgent: 'Claude-SearchBot',
-        allow: '/',
+        allow: '/'
       },
       {
         // Allow user-initiated requests (though robots.txt doesn't apply to these)
         userAgent: 'ChatGPT-User',
-        allow: '/',
+        allow: '/'
       },
       {
         // Allow user-initiated requests (though robots.txt doesn't apply to these)
         userAgent: 'Claude-User',
-        allow: '/',
-      },
-    ],
-  }
+        allow: '/'
+      }
+    ]
+  };
 }
